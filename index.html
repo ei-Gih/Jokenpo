@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Jokenpô</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="">
-    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
 </head>
 <body>
     <div id="jokenpo">
         <h1>Jogo de Jokenpô</h1>
-        <button onclick="jogar('pedra')">Pedra</button>
-        <button onclick="jogar('papel')">Papel</button>
-        <button onclick="jogar('tesoura')">Tesoura</button>
+        
+        <!-- Imagem padrão centralizada antes da escolha -->
+        <div id="default-choice">
+            <img src="img/jokenpo.png" alt="Escolha Inicial" class="escolha-imagem" id="imagem-default">
+        </div>
+
+        <!-- Área para mostrar a escolha do computador -->
+        <div id="computer-choice" style="display: none;">
+            <h3>Computer</h3>
+            <img id="imagem-computer" src="placeholder.png" alt="Escolha do Computador" class="escolha-imagem">
+        </div>
+
+        <!-- Resultado do jogo -->
         <p id="resultado"></p>
-    </div>    
+
+        <!-- Área para mostrar a escolha do jogador -->
+        <div id="player-choice" style="display: none;">
+            <h3>Player</h3>
+            <img id="imagem-jogador" src="placeholder.png" alt="Escolha do Jogador" class="escolha-imagem">
+        </div>
+
+        <!-- Imagens como botões para jogar -->
+        <div class="opcoes">
+            <img src="img/btn-pedra.png" alt="Pedra" onclick="jogar('pedra')" class="opcao">
+            <img src="img/btn-papel.png" alt="Papel" onclick="jogar('papel')" class="opcao">
+            <img src="img/btn-tesoura.png" alt="Tesoura" onclick="jogar('tesoura')" class="opcao">
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

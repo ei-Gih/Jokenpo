@@ -1,15 +1,68 @@
-#jokenpo {
-    text-align: center;
-    margin-top: 50px;
+/* Ajuste básico de estilo */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a8d5a8; /* Fundo verde */
+    overflow: hidden; /* Remove a rolagem */
 }
 
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+#jokenpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Define um tamanho máximo para não esticar demais em telas grandes */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+#default-choice, #computer-choice, #player-choice {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.escolha-imagem {
+    width: 15vw; /* Imagem dimensionada com base na largura da viewport */
+    height: 15vw; /* Mantém a proporção */
+    max-width: 100px; /* Limite máximo de tamanho */
+    max-height: 100px;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.opcao {
+    width: 12vw; /* Dimensões responsivas baseadas na largura da tela */
+    height: 12vw;
+    max-width: 80px; /* Limita o tamanho máximo das imagens */
+    max-height: 80px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.opcao:hover {
+    transform: scale(1.1);
 }
 
 #resultado {
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 3vw; /* Tamanho do texto responsivo */
+    background-color: #ffeb3b;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
 }
